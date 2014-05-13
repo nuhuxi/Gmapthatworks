@@ -4,4 +4,49 @@ html, body, #map-canvas {
     padding: 0px
     }
 
+#map-canvas {
+    width: 60%;
+    margin: 0 auto;
+    padding: 0px
+    }
+
+
+
+.container {
+	margin: 3em auto;
+	width: 600px;
+}
+
+.hidden {
+	display: none;
+}
+
+.left {
+	float: left;
+}
+
+
+
+.intro {
+	margin-bottom: 1em;
+}
+.stack {
+	clear: both;
+}
+
+.inspiration { 
+	margin-left: 3em;
+}
+
+.result {
+	border: 1px solid black;
+	padding: 5px;
+	margin: 0 auto 1em auto;
+}
+
+.error {
+	background-color: #F78181;
+	padding: 1em;
+}
+
 

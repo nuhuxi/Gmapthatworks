@@ -10,9 +10,38 @@
 	<script src="mapthatworks.js"></script>
   </head>
   <body>
+	<div class="container">
+		<div class="intro">
+			<div class="left stack-image"></div>
+			<div class="explanation">
+				<h1>Get a latitude and longitude using the Google GeoCoding API</h1>
+                <p>This app lets you read from a MySQL database and geocode a table of addresses that are then displayed on a Google Map</p>
+			</div>
+		</div>
+		
+		<div class="stack">	
+            <h3>Enter the address you would like to GeoCode</h3>
+            <form id="addressInfo">
+                <input type="text" id="streetAddress"  placeholder="Street"><br/>
+                <input type="text" id="city"  placeholder="City" ><br/>
+                <input type="text" id="state"  placeholder="State" ><br/>
+                <input type="submit" id="getGPS" value="Get GPS!">
+                <input type="submit" id="clearForm" value="Clear the form">
+            </form>
+            <br/>
+            <div id="coordinates">
+                <h3>The coordinates are displayed as &#34latitude, longitude&#34 (below) so that you can copy and paste them directly into Google Earth or Maps to see if they are correct. </h3>
+                <div><span id="latitude"></span>,<span id="longitude"></span><br/>
+                </div>
+            </div>
 
-        <div id='map-canvas'></div>
+		</div>
 
+	</div>
+    <div id='map-canvas'></div>
+    <div class="error">
+			<p>Uh-oh! Something went wrong with your request. Here's what we know:</p>
+    </div>
 
 
   </body>
