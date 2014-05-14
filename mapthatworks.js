@@ -42,6 +42,18 @@ $(document).ready(function() {
             /*    var location = new GLatLng(lat,long);
                 var marker = new GMarker(location);
                 map.addOverlay(marker); */
+                var latlng = new google.maps.LatLng(lat, long);
+                addmarker(latlng);
+                function addmarker(latilongi) {
+                    var marker = new google.maps.Marker({
+                        position: latilongi,
+                        title: 'new marker',
+                        zoom: 15,
+                        draggable: false,
+                        map: map
+                    });
+                    map.setCenter(marker.getPosition())
+                }
                 
                 $('#latitude').html(" "+data.results[0].geometry.location.lat);
                 $('#longitude').html(" "+data.results[0].geometry.location.lng);
