@@ -33,8 +33,19 @@ $(document).ready(function() {
             url: request,
             type: "GET"})
             .done(function (data) {
+                var lat = data.results[0].geometry.location.lat;
+                var long = data.results[0].geometry.location.lng;
+                console.log(lat);
+                console.log(long); 
+                $('#backFromGoogle').html(data.results[0].geometry.location.lat+", "+data.results[0].geometry.location.lng);
+
+            /*    var location = new GLatLng(lat,long);
+                var marker = new GMarker(location);
+                map.addOverlay(marker); */
+                
                 $('#latitude').html(" "+data.results[0].geometry.location.lat);
                 $('#longitude').html(" "+data.results[0].geometry.location.lng);
+
 
             });
     });
@@ -52,5 +63,5 @@ $(document).ready(function() {
     $('form').submit(function(e){e.preventDefault();});
             
     
-});
+ });
     
