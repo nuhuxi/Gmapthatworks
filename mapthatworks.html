@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Map</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <link type="text/css" rel="stylesheet" href="mapthatworks.css"/>
+    <script src="http://code.jquery.com/jquery.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+	<script src="mapthatworks.js"></script>
+  </head>
+  <body>
+	<div class="container">
+		<div class="intro">
+			<div class="left stack-image"></div>
+			<div class="explanation">
+				<h1>Get a latitude and longitude using the Google GeoCoding API</h1>
+                <h4>Enter an address and it will be displayed on the map.</h4>
+			</div>
+		</div>
+		
+		<div class="stack">	
+            <h2>Enter the address you would like to GeoCode</h2>
+            <form id="addressInfo">
+                <input type="text" id="streetAddress"  placeholder="Street"><br/>
+                <input type="text" id="city"  placeholder="City" ><br/>
+                <input type="text" id="state"  placeholder="State" ><br/>
+                <input type="submit" id="getGPS" value="Show it!">
+                <input type="submit" id="clearForm" value="Clear the form">
+            </form>
+
+            <div id="coordinates">
+                <h4>The coordinates are displayed as &#34latitude, longitude&#34 (below) so that you can copy and paste them directly into Google Earth or Maps to see if they are correct. </h4>
+                <div><span id="backFromGoogle"></span>
+                </div>
+            </div>
+
+		</div>
+
+	</div>
+    <div id='map-canvas'></div>
+  <!--  <div class="error">
+			<p>Uh-oh! Something went wrong with your request. Here's what we know:</p>
+    </div> -->
+
+
+  </body>
+</html>
